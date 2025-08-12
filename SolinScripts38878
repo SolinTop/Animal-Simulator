@@ -131,7 +131,7 @@ TabGames:CreateButton({
 TabGames:CreateButton({
     Name = "Grow A Garden 🌱",
     Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Xenith-Hub-43366"))()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Grow-a-Garden-Blackhub-Infinite-Sheckles-41369"))()
     end
 })
 TabGames:CreateButton({
