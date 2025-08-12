@@ -1,3 +1,29 @@
+local HttpService = game:GetService("HttpService")
+
+-- URL del tuo Firebase Realtime Database (metti il tuo URL qui!)
+local FirebaseURL = "https://your-firebase-project.firebaseio.com/usersCount.json"
+
+local function getUserCount()
+    local success, response = pcall(function()
+        return HttpService:GetAsync(FirebaseURL)
+    end)
+    if success then
+        local count = tonumber(response)
+        return count or 0
+    else
+        return 0
+    end
+end
+
+local function incrementUserCount()
+    local currentCount = getUserCount()
+    local newCount = currentCount + 1
+    pcall(function()
+        HttpService:PutAsync(FirebaseURL, tostring(newCount))
+    end)
+    return newCount
+end
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
