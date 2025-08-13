@@ -83,6 +83,12 @@ TabAnimal:CreateButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/vgfB9i7jmn97pj879t7h/-8yj9-k7--jpu-0p-p9Y-0-l-0ik--9U-N8y-Q2r/refs/heads/main/h0r769bgre59eg59ge59"))()
     end
 })
+TabAnimal:CreateButton({
+    Name = "LT fruit Script 👑",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/mkkkkkkkkkkak/LT-ANIMAL-SIMULATOR-OFC/refs/heads/main/V5.5"))()
+    end
+})  
 
 -- TAB 2: Other Games 🎮
 local TabGames = Window:CreateTab("Other Games 🎮", 6034509993)
